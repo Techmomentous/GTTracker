@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>GTracker</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>GTrackerApplication</servlet-name>
+    <servlet-class>com.gt.application.GTrackerApplication</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>LocationService</servlet-name>
+    <servlet-class>com.gt.services.LocationService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LocationService</servlet-name>
+    <url-pattern>/LocationService</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>MembersService</servlet-name>
+    <servlet-class>com.gt.services.MembersService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MembersService</servlet-name>
+    <url-pattern>/MembersService</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GCMService</servlet-name>
+    <servlet-class>com.gt.services.GCMService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GCMService</servlet-name>
+    <url-pattern>/GCMService</url-pattern>
+  </servlet-mapping>
+</web-app>
